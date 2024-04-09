@@ -2,16 +2,16 @@ LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.NUMERIC_STD.ALL;
 
---Komponent för att få BCD (binary coded decimal) för att lysa upp rätt
---segment på 7-segment displayen
+--Komponent fÃ¶r att fÃ¥ BCD (binary coded decimal) fÃ¶r att lysa upp rÃ¤tt
+--segment pÃ¥ 7-segment displayen
 --Kan skriva ut tal i intervallet [000-999]
 
 ENTITY binary_coded_decimal IS
     PORT (
        in_angle       :   IN INTEGER;     
-       seg_output100  :   OUT STD_LOGIC_VECTOR(7 DOWNTO 0); --BCD för hundratalet
-       seg_output10   :   OUT STD_LOGIC_VECTOR(7 DOWNTO 0); --BCD för tiotalet
-       seg_output1    :   OUT STD_LOGIC_VECTOR(7 DOWNTO 0)  --BCD för entalet 
+       seg_output100  :   OUT STD_LOGIC_VECTOR(7 DOWNTO 0); --BCD fÃ¶r hundratalet
+       seg_output10   :   OUT STD_LOGIC_VECTOR(7 DOWNTO 0); --BCD fÃ¶r tiotalet
+       seg_output1    :   OUT STD_LOGIC_VECTOR(7 DOWNTO 0)  --BCD fÃ¶r entalet 
     );
 END binary_coded_decimal;
 
@@ -27,7 +27,7 @@ BEGIN
     VARIABLE temp1 : INTEGER;
     
     BEGIN
-        -- Första siffran (hundratal)
+        -- FÃ¶rsta siffran (hundratal)
         temp100 := in_angle / 100;
         CASE temp100 IS
             WHEN 1 => seg_output100 <= "11111001";
