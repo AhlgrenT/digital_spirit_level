@@ -6,7 +6,7 @@ USE IEEE.STD_LOGIC_1164.ALL;
 ENTITY angle_converter IS
     PORT (
         in_val :  IN INTEGER;    --acceleration in either the X or the Y axis. In range 0-128
-        z_MSB  :  IN STD_LOGIC;  --MSB av accelerationen i Z-öed
+        z_MSB  :  IN STD_LOGIC;  --MSB av accelerationen i Z-Ã¶ed
         angle  :  OUT INTEGER    --Outputs the angle
     );
 END angle_converter;
